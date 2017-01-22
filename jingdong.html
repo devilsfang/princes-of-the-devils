@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin: 0px;padding:0px;}
+	.character a{color:black; text-decoration:none; outline:none;} 
+	.check a{font-size:14px;text-decoration:none; outline:none;}
+	.logo{
+		height:110px;
+		border-bottom: 1px solid #CCC;
+	}
+	.picture{
+		width: 327px;
+		margin-left:343px;
+		float: left;
+	}
+	.character{
+		width: 200px;
+		margin-right:343px;
+		margin-top: 54px;
+		float: right;
+	}
+	.box{
+		width: 400px;
+		height: 623px;
+		margin-left: 535px;
+		margin-top:57px;
+		float: left;
+	}
+	.row{
+		width: 400px;
+		height: 53px;
+		border:1px solid #CCC;
+		margin-bottom: 32px;
+	}
+	.input_p{
+		width: 100%;
+		height: 53px;
+		line-height: 53px;
+	}
+	label{
+		width: 100px;
+		height: 53px;
+		display: inline-block;
+		text-align: right;
+		color: black;
+	}
+	input{
+		border:0px;
+		outline: none;
+		padding-left: 20px;
+	}
+	span{
+		color:#CCC;
+		font-weight: bold;
+		font-size: 13px;
+		display: none;
+	}
+	button{
+		width: 400px;
+		height: 54px;
+		color: #fff;
+		background: red;
+		font-size: 16px;
+		border-color: red;
+		margin-top: 37px;
+	}
+	.spread{
+		width: 400px;
+		height: 623px;
+		margin-top: 57px;
+		margin-left: 95px;
+		float: left;
+		border-left:1px solid #CCC;
+	}
+	.spread_1{
+		height: 57px;
+		width: 180px;
+		border-bottom:1px solid #CCC;
+		margin:0 auto;
+	}
+	.spread img{
+		display:inline-block;
+		float: left;
+	}
+	.spread a{
+		display: inline-block;
+		color:black; 
+		text-decoration:none; 
+		outline:none;
+		line-height: 39px;
+		margin-left: 20px;
+		float: left;
+	}
+	.spread_2{
+		margin-top:20px;
+		margin-left:95px;
+	}
+	.spread_1 a:hover{
+		font-weight: bold;
+	}
+	</style>
+</head>
+<body>
+	<!-- S=logo -->
+	<div class="logo">
+		<div class="picture"><img src="image/jingdong.png" alt=""></div>
+		<div class="character"><p style="color:#CCC">已有账号？<a href="#">请登录</a></p></div>
+	</div>
+	<!-- E=logo -->
+	<!-- S=form -->
+	<div class="box">
+	  <div class="row">
+		<form action=".php" method="post">
+			<p class="input_p"><label>用户名</label><input type="text" placeholder="请输入用户名" id="name"></p>
+			<p><span>支持中文、字母、数字、"-" "_"的组合，4-20个字符</span></p>
+		</form>
+	  </div>
+	  <div class="row">
+		<form action=".php" method="post">
+			<p class="input_p"><label>设置密码</label><input type="text" placeholder="建议至少使用两种字符组合" ></p>
+			<p><span>建议使用字母、数字和符号两种及以上的组合,6-20个字符</span></p>
+		</form>
+	</div>
+		<div class="row">
+		<form action=".php" method="post">
+			<p class="input_p"><label>确认密码</label><input type="text" placeholder="请再次输入密码" ></p>
+			<p><span>请再次输入密码</span></p>
+		</form>
+	  </div>
+	  <div class="row">
+		<form action=".php" method="post">
+			<p class="input_p"><label>中国 0086</label>
+					<input type="text" placeholder="建议使用常用手机" ></p>
+			<p><span>完成后，你可以用该手机登录和找回密码</span></p>
+		</form>
+	  </div>
+	  <div class="row">
+		<form action=".php" method="post">
+			<p class="input_p"><label>验证码</label><input type="text" placeholder="请输入验证码" ></p>
+			<p><span>看不清？点击图片更换验证码</span></p>
+		</form>
+	  </div>
+	  <div class="row">
+		<form action=".php" method="post">
+			<p class="input_p"><label>手机验证码</label><input type="text" placeholder="请输入手机验证码" ></p>
+		</form>
+	  </div>
+	  <div class="check">
+	  	<input type="checkbox" style="float:left" ><p style="float:left">阅读并同意<a href="#">《京东用户注册协议》《隐私政策》</a></p>
+	  </div>
+	  <div class="button"><button>立刻注册</button></div>
+	</div>
+	<!-- E=form -->
+	<!-- S=spread -->
+	<div class="spread">
+		<div class="spread_1">
+			<img src="image/logo1.png" alt=""><a href="">企业用户注册</a>
+		</div>
+		<div class="spread_2">
+			<img src="image/logo2.png" alt="广告二">
+		</div>
+	</div>
+	<!-- E=spread -->
+	<script>
+	document.getElementById("name").onfocus=function(){
+		document.querySelector('span').setAttribute('display','block');
+	}
+	</script>
+</body>
+</html>
